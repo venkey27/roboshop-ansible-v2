@@ -1,0 +1,11 @@
+ansible_user: ec2-user
+ansible_password: DevOps321
+MONGODB_HOST: mongodb.exptrack.shop
+REDIS_HOST: redis.exptrack.shop
+CATALOGUE_HOST: catalogue.exptrack.shop
+MYSQL_HOST: mysql.exptrack.shop
+CART_HOST: cart.exptrack.shop
+USER_HOST: user.exptrack.shop
+RABBITMQ_HOST: rabbitmq.exptrack.shop
+SHIPPING_HOST: shipping.exptrack.shop
+PAYMENT_HOST: payment.exptrack.shop
