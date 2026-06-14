@@ -1,7 +1,7 @@
 - name: application setup
   import_role:
     name: common
-    tasks_from: app-setup
+    tasks_from: app-setup.yaml
 
 - name: nodejs setup
   import_role: 
