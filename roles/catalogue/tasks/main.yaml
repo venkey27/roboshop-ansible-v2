@@ -51,7 +51,7 @@
 
 - name: copy mongodb repo file
   copy:
-    src: mongo.repo  #src means mongo.repo file should be in the same location where this playbook is present # src means source file
+    src: "{{ playbook_dir }}/roles/mongodb/files/mongo.repo" #mongo.repo  #src means mongo.repo file should be in the same location where this playbook is present # src means source file
     dest: /etc/yum.repos.d/mongo.repo # dest means destination file. This is the location where the mongo.repo file will be copied to on the target machine.
 
 - name: install mongodb server
