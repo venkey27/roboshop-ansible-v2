@@ -1,9 +1,9 @@
-- name: congiguring frontend server
+- name: configuring frontend server
   hosts: frontend
   become: yes
   tasks:
   - name: enable nginx 1.24
-    command: dnf module enable nginx:1.24 -y
+    command: "dnf module enable nginx:1.24 -y"
 
   - name: install nginx
     package:
