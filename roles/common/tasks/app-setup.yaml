@@ -31,3 +31,5 @@
     src: "/tmp/{{ component }}.zip"
     dest: /app
     remote_src: yes
+
+
