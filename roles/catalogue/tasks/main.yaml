@@ -3,6 +3,16 @@
     name: common
     tasks_from: app-setup
 
+- name: nodejs setup
+  import_role: 
+    name: common
+    tasks_from: nodejs
+
+- name: systemd setup
+  import_role: 
+    name: common
+    tasks_from: systemd-setup
+
 - name: copy mongodb repo file
   copy:
     src: "{{ playbook_dir }}/roles/mongodb/files/mongo.repo" #mongo.repo  #src means mongo.repo file should be in the same location where this playbook is present # src means source file
@@ -17,9 +27,9 @@
   shell: mongosh --host "{{ MONGODB_HOST }}" --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
   
-- name: print catalogue output
-  debug:
-    msg: "{{ catalogue_output}}"
+# - name: print catalogue output
+#   debug:
+#     msg: "{{ catalogue_output}}"
   
 - name: load products 
   shell: mongosh --host "{{ MONGODB_HOST }}" </app/db/master-data.js
